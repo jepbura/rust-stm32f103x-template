@@ -33,5 +33,35 @@ opt-level = "z"               # Optimize for size
 [profile.dev]
 opt-level = "z"               # Optimize for size
 
+[build]
+target = "thumbv7m-none-eabi"
+
+[target.thumb76m-none-eabi]
+target = "cargo-embed"
+
 [default]
-chip = "STM32F103RET6"
+chip = "STM32F103RE"
+
+[probe]
+protocol = "stlink"
+
+[package.metadata.cargo-embed]
+target = "thumbv7m-none-eabi"
+chip = "STM32F103RE"
+probe = "stlink"
+
+[package.metadata.cargo-flash]
+target = "thumbv7m-none-eabi"
+chip = "STM32F103RE"
+probe = "stlink"
+
+[default.gdb]
+enabled = false
+
+[default.rtt]
+enabled = true
+
+[default.flash]
+reset = true
+halt_afterwards = true
+verify = true

@@ -1,5 +1,26 @@
-[default]
-chip = "STM32F103RET6"
+#[default]
+#chip = "STM32F103RE"
 
-[probe]
-protocol = "stlink"
+#[probe]
+#protocol = "stlink"
+
+#[package.metadata.cargo-flash]
+#target = "thumbv7m-none-eabi"
+#chip = "STM32F103RET6"
+#probe = "stlink"
+
+#[package.metadata.cargo-embed]
+#target = "thumbv7m-none-eabi"
+#chip = "STM32F103RET6"
+#probe = "stlink"
+
+#[default.gdb]
+#enabled = false
+
+#[default.rtt]
+#enabled = true
+
+#[default.flash]
+#reset = true
+#halt_afterwards = true
+#verify = true
